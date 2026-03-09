@@ -1,4 +1,4 @@
-
+import { IonPage } from './components/IonPage';
 import React, { useState, useEffect } from 'react';
 import { AppProvider, useAppContext } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
@@ -60,6 +60,7 @@ const MainLayout: React.FC = () => {
             <Modules />
           </motion.div>
         )}
+        {activeTab === 'ikatan-ion' && <IonPage />}
       </AnimatePresence>
 
       <Footer />
