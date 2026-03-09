@@ -4,15 +4,42 @@ import { motion } from 'framer-motion';
 import { Atom, Target, FlaskConical, Zap, Link as LinkIcon, Triangle, Settings } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 
-const MATERIALS = [
-  { title: "Konfigurasi Elektron", desc: "Visualisasi pengisian orbital.", icon: <Atom size={32} className="text-blue-400" />, link: "https://read.bookcreator.com/fyO8AH2rOhW11nFZCEarrYxjQNm2/yUiTQ77_RX-RYVIsA4sVzw/DLAECQIuSz-57INREGp-Ig" },
-  { title: "Aturan Oktet & Duplet", desc: "Kestabilan melalui pengisian elektron.", icon: <Target size={32} className="text-red-400" />, link: "https://www.youtube.com/watch?v=qg1L1SbG0oA" },
-  { title: "Struktur Lewis", desc: "Representasi titik elektron.", icon: <FlaskConical size={32} className="text-green-400" />, link: "https://www.webqc.org/lewis_structure_generator.php" },
-  { title: "Ikatan Ionik", desc: "Transfer elektron & pembentukan ion.", icon: <Zap size={32} className="text-yellow-400" />, link: "https://share.google/4DkXK8QKAs3uNfpZX" },
-  { title: "Ikatan Kovalen", desc: "Berbagi pasangan elektron.", icon: <LinkIcon size={32} className="text-purple-400" />, link: "https://share.google/Alx4cwQj6ZlzzG4in" },
-  { title: "Polaritas & Geometri", desc: "Bentuk molekul & momen dipol.", icon: <Triangle size={32} className="text-pink-400" />, link: "https://share.google/6vlezl8hArcECQLOc" },
-  { title: "Ikatan Logam", desc: "Elektron delokalisasi.", icon: <Settings size={32} className="text-slate-400" />, link: "https://p2k.stekom.ac.id/ensiklopedia/Ikatan_logam" }
-];
+{
+  title: "Ikatan Ion",
+  desc: "Transfer elektron dan pembentukan ion",
+  icon: <Zap size={32} className="text-yellow-400" />,
+  path: "/materi/ikatan-ion"
+},
+{
+  title: "Ikatan Kovalen",
+  desc: "Berbagi pasangan elektron",
+  icon: <LinkIcon size={32} className="text-purple-400" />,
+  path: "/materi/ikatan-kovalen"
+},
+{
+  title: "Kepolaran",
+  desc: "Polar dan nonpolar",
+  icon: <Target size={32} className="text-red-400" />,
+  path: "/materi/kepolaran"
+},
+{
+  title: "Ikatan Logam",
+  desc: "Lautan elektron",
+  icon: <Settings size={32} className="text-slate-400" />,
+  path: "/materi/ikatan-logam"
+},
+{
+  title: "Bentuk Molekul",
+  desc: "Teori VSEPR",
+  icon: <Triangle size={32} className="text-pink-400" />,
+  path: "/materi/bentuk-molekul"
+},
+{
+  title: "Gaya Antarmolekul",
+  desc: "Gaya London, dipol, dan hidrogen",
+  icon: <Orbit size={32} className="text-cyan-400" />,
+  path: "/materi/gaya-antarmolekul"
+}
 
 export const MateriContent: React.FC = () => {
   return (
