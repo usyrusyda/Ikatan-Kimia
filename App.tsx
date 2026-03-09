@@ -38,29 +38,43 @@ const MainLayout: React.FC = () => {
       {/* Navbar hanya muncul jika sudah masuk ke modul, atau tampilkan dock kecil */}
       <Navbar />
 
-      <AnimatePresence mode="wait">
-        {activeTab === 'home' ? (
-          <motion.div
-            key="landing"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="relative z-10"
-          >
-            <Hero />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="dashboard"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="relative z-10"
-          >
-            <Modules />
-          </motion.div>
-        )}
-        {activeTab === 'ikatan-ion' && <IonPage />}
+   <AnimatePresence mode="wait">
+  {activeTab === 'home' && (
+    <motion.div
+      key="landing"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative z-10"
+    >
+      <Hero />
+    </motion.div>
+  )}
+
+  {activeTab === 'modules' && (
+    <motion.div
+      key="dashboard"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative z-10"
+    >
+      <Modules />
+    </motion.div>
+  )}
+
+  {activeTab === 'ikatan-ion' && (
+    <motion.div
+      key="ikatan-ion"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative z-10"
+    >
+      <IonPage />
+    </motion.div>
+  )}
+</AnimatePresence>
       </AnimatePresence>
 
       <Footer />
